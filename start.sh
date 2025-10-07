@@ -1,2 +1,2 @@
 #!/bin/bash
-smithery-ai mcp run mcp_server_definition.py:timetable_mcp_server --host 0.0.0.0 --port $PORT
+gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
